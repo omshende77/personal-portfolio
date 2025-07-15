@@ -11,7 +11,7 @@ const ContactComments = () => {
   useEffect(() => {
     try {
       const saved = localStorage.getItem("comments");
-      console.log("📦 loaded from localStorage:", saved);
+      console.log("loaded from localStorage:", saved);
       if (saved) {
         const parsed = JSON.parse(saved);
         if (Array.isArray(parsed)) {
@@ -19,7 +19,7 @@ const ContactComments = () => {
         }
       }
     } catch (error) {
-      console.error("❌ Failed to load comments:", error);
+      console.error("Failed to load comments:", error);
     }
   }, []);
 
@@ -32,9 +32,9 @@ const ContactComments = () => {
 
     try {
       localStorage.setItem("comments", JSON.stringify(comments));
-      console.log("✅ Comments saved to localStorage", comments);
+      console.log("Comments saved to localStorage", comments);
     } catch (error) {
-      console.error("❌ Failed to save comments:", error);
+      console.error("Failed to save comments:", error);
     }
   }, [comments]);
 
