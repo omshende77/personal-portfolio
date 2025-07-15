@@ -5,7 +5,7 @@ import About from "./components/About.jsx";
 import Radio from "./components/Radio.jsx";
 import Contact from "./components/Contact.jsx";
 import Footer from "./components/Footer.jsx";
-import SplashScreen from "./components/Splashscreen.jsx";
+import SplashScreen from "./components/SplashScreen.jsx";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
