@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "boxicons/css/boxicons.min.css";
 import {
   SiHtml5, SiCss3, SiJavascript, SiTailwindcss, SiReact, SiNodedotjs,
@@ -26,7 +26,14 @@ const techStack = [
 
 export default function Radio({ selected, setSelected }) {
   const [selectedProject, setSelectedProject] = useState(null);
-
+  useEffect(() => {
+    if (selectedProject) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+  }, [selectedProject]);
+  
   const options = ["Projects", "Certifications", "Tech Stacks"];
 
   const projects = [
